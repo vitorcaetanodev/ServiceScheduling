@@ -1,22 +1,21 @@
 {
-  "name": "service-scheduling",
+  "name": "ServiceScheduling",
   "version": "1.0.0",
-  "description": "A system to manage service provider schedules and client appointments with real-time updates and Google Calendar integration.",
+  "description": "Um sistema onde prestadores de serviços podem gerenciar seus horários e clientes podem agendar atendimentos.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha"
+    "test": "jest"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.0",
-    "socket.io": "^4.5.0",
-    "googleapis": "^105.0.0"
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
   },
   "devDependencies": {
-    "mocha": "^10.0.0",
-    "chai": "^4.3.6",
-    "proxyquire": "^2.1.3"
-  },
-  "author": "",
-  "license": "MIT"
+    "jest": "^29.0.0",
+    "supertest": "^6.3.3"
+  }
 }

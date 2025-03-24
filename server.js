@@ -1,8 +1,10 @@
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
+
 const socketHandler = require('./sockets/socketHandler');
 const googleCalendar = require('./calendar/googleCalendar');
+const appointmentRoutes = require('./routes/appointmentRoutes');
 
 const app = express();
 const server = http.createServer(app);
@@ -29,6 +31,9 @@ app.post('/calendar/event', async (req, res) => {
     res.status(500).json({ error: 'Failed to create calendar event' });
   }
 });
+
+// Appointment routes for creating, fetching and updating appointments
+app.use('/appointments', appointmentRoutes);
 
 // Server listening on designated port
 const PORT = process.env.PORT || 3000;
