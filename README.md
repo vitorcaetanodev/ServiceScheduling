@@ -1,8 +1,4 @@
-# ServiceScheduling
- 
-Aqui está o **README.md** pronto para você copiar e colar no GitHub:
 
-```markdown
 # Service Scheduling
 
 **Version:** 1.0.0
